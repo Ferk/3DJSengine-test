@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>3D engine</title>
+
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=UnifrakturCook:bold">
+
+<style>
+
+body {
+ background-image: url('img/skytile.jpg');
+}
+
+div#title {
+  font-size: 40pt;
+  font-family: UnifrakturCook;
+  text-align: center;
+  margin: auto;
+  width: 500px;
+  height: 40px;
+  margin-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-radius: 30px;
+  border-color: yellow;
+  border: solid 5px;
+  background-color: #666;
+  color: #FFF;
+}
+
+div#box {
+  float: center;
+  width: 250px;
+  height: 200px;
+  margin: auto;
+  padding: 10px;
+  background-color: #BBB;
+  border: solid 2px;
+  border-color: #333;
+  border-radius: 20px;
+}
+div#box div {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+div#box button {
+  margin-top: 20px;
+  margin-left: 25%;
+  margin-right: 25%;
+  font-size: 32pt;
+  border-radius: 10px;
+}
+div#box button:hover {
+  background-color: #FFF;
+  color: #333;
+}
+
+</style>
+
+<script type="text/javascript">
+
+  function enterGame() {
+    // Acceder
+    window.location = "game.html?n="+$("nick").value+"&m="+$("mapName").value;
+  }
+
+  function $(id){ return document.getElementById(id); }
+
+</script>
+
+</head>
+<body>
+
+  <div id="title">
+    Entorno 3D Javascript
+  </div>
+
+  <div id="box">
+
+    <div>
+      Nick: <input id="nick" type="textbox" />
+    </div>
+    <div>
+      Entorno: 
+      <select id="mapName">
+        <option value="map01">Mapa 1</option>
+        <option value="map02">Mapa 2</option>
+        <option value="map03">Mapa 3</option>
+      </select>
+    </div>
+
+    <button onclick="enterGame()">Entrar</button>
+
+  </div>
+
+</body>
+</html>
